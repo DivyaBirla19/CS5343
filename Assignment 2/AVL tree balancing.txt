@@ -1,0 +1,37 @@
+BalanceRightStLine(n1,n2,n3){
+tmp= n1.parent;
+n1.parent= n2;
+n1.right=n2.left;
+n2.left.parent=n1;
+n2.parent=tmp;
+n2.left=n1;
+tmp2.right=n2;
+}
+
+
+BalanceLeftZigzag{
+
+n3.parent=n1;
+n2.right=n3.left;
+n3.left.parent=n2;
+n3.left=n2;
+n2.parent=n3;
+n1.left=n3;
+
+BalanceLeftStLine(n1,n3,n2)
+}
+
+
+
+
+
+BalanceRightZigzag{
+n3.parent=n1;
+n2.left=n3.right;
+n3.right.parent=n2;
+n3.right=n2;
+n2.parent=n3;
+n1.right=n3;
+
+BalanceRightStLine(n1,n3,n2)
+}
